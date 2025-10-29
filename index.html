@@ -1,46 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giulio Barnuevo | Portfolio</title>
+  <meta charset="utf-8">
+  <title>Giulio Barnuevo – Analytics Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects and analytics training – SQL, statistics, data mining/ML, time series, optimization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; background: #fafafa; color: #333; }
-    h1 { color: #222; }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .repo { margin-bottom: 1rem; }
+    :root{
+      --bg:#0b0c10; --card:#111318; --ink:#eaf0f1; --muted:#b8c4c7; --brand:#6ee7b7; --chip:#1a1d25; --stroke:#262a33;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+    .wrap{max-width:1080px;margin:auto;padding:28px}
+    header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .me h1{font-size:28px;margin:0}
+    .me p{margin:6px 0 0;color:var(--muted)}
+    nav a{margin-left:16px;color:var(--muted)} nav a:hover{color:var(--ink)}
+    .section{margin:32px 0}
+    .section h2{font-size:22px;margin:0 0 16px;border-bottom:1px solid var(--stroke);padding-bottom:10px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:18px}
+    @media(min-width:800px){.card--half{grid-column:span 6}}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:6px 0 0;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+    .tag{background:var(--chip);border:1px solid var(--stroke);padding:4px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;border:1px solid var(--stroke);background:var(--chip);
+      padding:8px 12px;border-radius:10px;font-size:13px;color:var(--ink)}
+    .btn:hover{opacity:.9;border-color:var(--brand)}
+    .two-col{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:900px){.two-col{grid-template-columns:1.4fr .9fr}}
+    .bullet{margin:6px 0;color:var(--muted)}
+    .pill{display:inline-block;border:1px solid var(--stroke);border-radius:999px;padding:6px 10px;margin:4px 6px 0 0;background:var(--chip);font-size:12px;color:var(--muted)}
+    .small{font-size:12px;color:var(--muted)}
+    .notice{color:var(--muted);font-size:13px;margin-top:6px}
   </style>
 </head>
 <body>
-  <h1>Giulio Barnuevo</h1>
-  <p>Welcome to my portfolio. Below are some GitHub projects.</p>
-  <p>Disclaimer: The data used on the generation of these reports and analysis is fake due to privacy reasons, the Dashboard and Excel report cannot be directly executed because they use a file with confidential information that was not uploaded.</p>
+  <div class="wrap">
+    <header>
+      <div class="me">
+        <h1>Giulio Barnuevo</h1>
+        <p>Business Analytics | SQL • Python • R • Power BI • Tableau</p>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#bentley">Bentley Analytics Training</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="mailto:gbarnuevo@falcon.bentley.edu">Contact</a>
+      </nav>
+    </header>
 
-  <div id="projects"></div>
+    <!-- PROJECTS (auto from GitHub) -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <p class="notice">Disclaimer: data in some demos is synthetic due to confidentiality. Dashboards/Excel reports may not run without secured source files.</p>
+      <div id="repoGrid" class="grid"></div>
+    </section>
 
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2>Skills & Tools</h2>
+      <div class="card">
+        <div>
+          <span class="pill">SQL</span><span class="pill">Python</span><span class="pill">R</span>
+          <span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">Excel (Pivots)</span>
+          <span class="pill">Data Wrangling</span><span class="pill">Data Visualization</span>
+          <span class="pill">Multivariate Analysis</span><span class="pill">Time Series</span>
+          <span class="pill">Optimization & Simulation</span><span class="pill">Business Intelligence</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTLEY TRAINING -->
+    <section class="section" id="bentley">
+      <h2>Bentley Analytics Training (MS-level)</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Methods that show up in my work</h3>
+          <div class="tags">
+            <span class="tag">Data Management & SQL</span>
+            <span class="tag">Quantitative Analysis</span>
+            <span class="tag">Intermediate Modeling</span>
+            <span class="tag">Data Mining / ML</span>
+            <span class="tag">Time Series</span>
+            <span class="tag">Optimization & Simulation</span>
+            <span class="tag">Managing with Analytics</span>
+          </div>
+          <p class="small" style="margin-top:10px">Graduate coursework covering SQL, inference, regression/multivariate, supervised & unsupervised ML, forecasting, OR/simulation, and decision-making with analytics.</p>
+        </div>
+        <div class="card">
+          <h3>Tooling</h3>
+          <p>SQL, Python, R, Tableau, Power BI. Focus on reproducible analysis and turning models into business decisions.</p>
+          <div class="tags"><span class="tag">Applied</span><span class="tag">Reproducible</span><span class="tag">Business-first</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Research Assistant II – Bentley/Harvard/MIT</h3>
+        <p class="bullet">• Automated dashboards and cost models for decision support.</p>
+        <p class="bullet">• Modeled large cross-sector datasets; validated findings.</p>
+        <p class="bullet">• Worked with faculty to turn analysis into action.</p>
+      </div>
+      <div class="card">
+        <h3>Administrative Analyst – Beauty Care Import</h3>
+        <p class="bullet">• Built marketplace/provider alliances; contributed to ~15% profit lift.</p>
+        <p class="bullet">• Automated and produced financial reports.</p>
+      </div>
+      <div class="card">
+        <h3>HSE Specialist – Subsectorial Irrigation Program (PSI)</h3>
+        <p class="bullet">• Designed HSE plans; training and labor-management processes.</p>
+      </div>
+      <div class="card">
+        <h3>Earlier roles</h3>
+        <p class="bullet">• ATS Group: Excel macro automations; CRM configuration.</p>
+        <p class="bullet">• Yokogawa do Sul: SAP/Excel automations; logistics.</p>
+        <p class="bullet">• MIDIS: Automated reports with Excel/Power BI.</p>
+        <p class="bullet">• Kuria Group: Benchmarking tools (Excel, R, SQL).</p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <h2>Education & Contact</h2>
+      <div class="card">
+        <p><b>Bentley University, McCallum Graduate School of Business</b> — Graduate analytics coursework in SQL, statistics, data mining/ML, time series, optimization, and analytics management.</p>
+        <p><b>Universidad de Lima</b> — B.S. Industrial Engineering.</p>
+        <p>Waltham, MA • <a href="mailto:gbarnuevo@falcon.bentley.edu">gbarnuevo@falcon.bentley.edu</a> • <a href="https://www.linkedin.com/in/giuliobr/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </section>
+
+    <footer class="wrap">
+      <div class="small">© <script>document.write(new Date().getFullYear())</script> Giulio Barnuevo • GitHub Pages</div>
+    </footer>
+  </div>
+
+  <!-- Auto-load GitHub repos (links included). Edit the 'PINNED' array to force priority. -->
   <script>
-    fetch("https://api.github.com/users/Giuliobarnuevo/repos")
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById("projects");
-    data
-      // Filter out your portfolio repo
-      .filter(repo => repo.name.toLowerCase() !== "giuliobarnuevo.github.io")
-      // Sort by most recently updated
-      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
-      // Display remaining repos
-      .forEach(repo => {
-        const div = document.createElement("div");
-        div.className = "repo";
-        div.innerHTML = `
-          <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-          <p>${repo.description || "No description provided."}</p>
-          <p><small>Last updated: ${new Date(repo.updated_at).toLocaleDateString()}</small></p>
-        `;
-        container.appendChild(div);
-      });
-  });
+    const USER = "Giuliobarnuevo";
+    // Optional: put key repos here to pin them at the top in this order.
+    const PINNED = [
+      // "ev-crash-risk",
+      // "bank-ops-classifier",
+      // "hpc-cost-dash"
+    ];
+
+    function repoCard(r){
+      const safeDesc = r.description ? r.description.replace(/</g,"&lt;").replace(/>/g,"&gt;") : "—";
+      const last = new Date(r.pushed_at).toLocaleDateString();
+      const lang = r.language || "Mixed";
+      return `
+        <div class="card card--half">
+          <h3><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h3>
+          <p>${safeDesc}</p>
+          <div class="tags">
+            <span class="tag">★ ${r.stargazers_count}</span>
+            <span class="tag">Forks ${r.forks_count}</span>
+            <span class="tag">${lang}</span>
+            <span class="tag small">${last}</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="${r.html_url}" target="_blank" rel="noopener">Repo</a>
+            ${r.homepage ? `<a class="btn" href="${r.homepage}" target="_blank" rel="noopener">Live</a>` : ""}
+          </div>
+        </div>`;
+    }
+
+    async function loadRepos(){
+      const res = await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=updated`);
+      const repos = await res.json();
+
+      // Filter: no forks, exclude the portfolio repo
+      const filtered = repos.filter(r =>
+        !r.fork &&
+        r.name.toLowerCase() !== `${USER.toLowerCase()}.github.io`
+      );
+
+      // Prioritize pinned list, then sort rest by stars then recent activity
+      const map = new Map(filtered.map(r => [r.name.toLowerCase(), r]));
+      const pinnedFirst = PINNED
+        .map(n => map.get(n.toLowerCase()))
+        .filter(Boolean);
+
+      const rest = filtered
+        .filter(r => !PINNED.map(n=>n.toLowerCase()).includes(r.name.toLowerCase()))
+        .sort((a,b) => (b.stargazers_count - a.stargazers_count) || (new Date(b.pushed_at) - new Date(a.pushed_at)));
+
+      const ordered = pinnedFirst.concat(rest);
+
+      const grid = document.getElementById('repoGrid');
+      ordered.slice(0, 12).forEach(r => grid.insertAdjacentHTML('beforeend', repoCard(r)));
+    }
+    loadRepos();
   </script>
 </body>
 </html>
